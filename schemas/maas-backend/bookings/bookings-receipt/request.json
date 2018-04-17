@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://api.maas.global/maas-backend/bookings/bookings-receipt/request",
+  "description": "Request schema for bookings-receipt",
+  "type": "object",
+  "properties": {
+    "identityId": {
+      "$ref": "../../../core/components/units.json#/definitions/identityId"
+    },
+    "bookingId": {
+      "description": "bookingId of the requested booking to send receipt for",
+      "$ref": "../../../core/components/units.json#/definitions/uuid"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "sendZeroPricedReceipts": {
+          "description": "Defines if zero priced receipts are sent to user",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "headers": {
+      "$ref": "../../../core/components/api-common.json#/definitions/headers"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
