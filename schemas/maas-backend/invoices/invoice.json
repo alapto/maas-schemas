@@ -12,7 +12,7 @@
         "id": {
           "$ref": "#/definitions/InvoiceId"
         },
-        "customerId": {
+        "identityId": {
           "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
         },
         "bookingId": {
@@ -27,7 +27,7 @@
           "minLength": 1
         }
       },
-      "required": [ "id", "customerId", "bookingId", "lineItems" ],
+      "required": [ "id", "identityId", "bookingId", "lineItems" ],
       "additionalProperties": false
     }
   }

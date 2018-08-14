@@ -8,14 +8,14 @@
       "minLength": 2,
       "maxLength": 255
     },
-    "customerId": {
+    "identityId": {
       "$ref": "components/units.json#/definitions/identityId"
     },
     "type": {
       "type": "string",
-      "enum": ["card", "paypal_express_checkout", "amazon_payments", "direct_debit", "generic", "alipay", "unionpay", "apple_pay"]
+      "enum": ["card", "paypal_express_checkout", "amazon_payments", "direct_debit", "generic", "alipay", "unionpay", "apple_pay", "google_pay"]
     },
-    "gateway": {
+    "gatewayName": {
       "type": "string",
       "minLength": 2,
       "maxLength": 255
@@ -42,6 +42,6 @@
       "$ref": "card.json"
     }
   },
-  "required": [ "customerId", "type" ],
+  "required": [ "identityId", "type" ],
   "additionalProperties": false
 }

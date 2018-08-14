@@ -13,7 +13,7 @@
         "id": {
           "$ref": "#/definitions/InvoiceLineItemId"
         },
-        "gatewayId": {
+        "chargeId": {
           "type": "string",
           "minLength": 4
         },
